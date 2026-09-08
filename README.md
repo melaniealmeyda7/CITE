@@ -1,5 +1,5 @@
 # Cámara Internacional de Talento y Empleabilidad (CITE)
-## Landing Page Institucional Oficial (Modo Profesional)
+## Landing Page Institucional Oficial 
 
 Sitio web corporativo y de captación de impacto social desarrollado para la **Cámara Internacional de Talento y Empleabilidad (CITE)**, una asociación internacional sin fines de lucro (ONG) dedicada a cerrar la brecha laboral y potenciar el talento global en más de 25 países.
 
