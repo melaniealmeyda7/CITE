@@ -1,7 +1,17 @@
 # Cámara Internacional de Talento y Empleabilidad (CITE)
-## Landing Page Institucional Oficial 
+## Landing Page Institucional Oficial (Modo Profesional)
 
-Sitio web corporativo y de captación de impacto social desarrollado para la **Cámara Internacional de Talento y Empleabilidad (CITE)**, una asociación internacional sin fines de lucro (ONG) dedicada a cerrar la brecha laboral y potenciar el talento global en más de 25 países.
+[![Visualizar en vivo](https://img.shields.io/badge/Demo_en_Vivo-GitHub_Pages-2563EB?style=for-the-badge&logo=github)](https://melaniealmeyda7.github.io/CITE/)
+[![Estado](https://img.shields.io/badge/Estado-Activo_&_Oficial-10B981?style=for-the-badge)](https://melaniealmeyda7.github.io/CITE/)
+
+---
+
+### 🌐 Link de Visualización Oficial en Vivo:
+👉 **[https://melaniealmeyda7.github.io/CITE/](https://melaniealmeyda7.github.io/CITE/)**
+
+---
+
+Sitio web corporativo y de captación de impacto social desarrollado para la **Cámara Internacional de Talento y Empleabilidad (CITE)**, una asociación internacional sin fines de lucro (ONG) dedicada a cerrar la brecha laboral y potenciar el talento global en más de 28 países de **Latinoamérica y el Caribe**.
 
 ---
 
@@ -73,4 +83,4 @@ Al ser un sitio web estático optimizado, puede alojarse de forma inmediata en:
 
 ## 📜 Licencia y Derechos
 
-© 2026 Cámara Internacional de Talento y Empleabilidad (CITE). Asociación Peruana Sin Fines de Lucro.
+© 2026 Cámara Internacional de Talento y Empleabilidad (CITE). Asociación Internacional Sin Fines de Lucro.
