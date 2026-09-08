@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CITE | Cámara Internacional de Talento y Empleabilidad</title>
+    <meta name="description" content="Organización internacional sin fines de lucro dedicada a promover la empleabilidad, la formación técnica y la inserción laboral digna y equitativa en Latinoamérica y el Caribe.">
+    <meta name="keywords" content="CITE, ONG, talento, empleabilidad, becas, certificacion, inclusion laboral, impacto social, Latinoamérica, Caribe">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cite: {
+                            navy: '#0B132B',
+                            dark: '#1C2541',
+                            blue: '#2563EB',
+                            lightBlue: '#3B82F6',
+                            teal: '#0D9488',
+                            emerald: '#059669',
+                            slate: '#334155',
+                            lightBg: '#F8FAFC',
+                            cardBg: '#FFFFFF',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-cite-blue selection:text-white">
+
+    <!-- Top Announcement Bar (ONG & Transparencia) -->
+    <div class="bg-gradient-to-r from-cite-navy via-slate-900 to-cite-dark text-white text-xs sm:text-sm py-2 px-4 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+            <div class="flex items-center gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                    Convocatoria 2026 Abierta
+                </span>
+                <span class="text-slate-200">Programa Internacional de Becas y Certificación de Empleabilidad</span>
+            </div>
+            <div class="flex items-center gap-4 text-xs">
+                <a href="#programas" class="text-cyan-300 hover:text-white font-semibold inline-flex items-center gap-1 transition-colors">
+                    Postular a Beca <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+                <span class="hidden md:inline text-slate-500">|</span>
+                <span class="hidden md:flex items-center gap-1 text-slate-300">
+                    <i data-lucide="globe" class="w-3.5 h-3.5 text-cyan-400"></i> Presencia en 28 países de Latinoamérica y el Caribe
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header id="main-header" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo Brand -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-cite-navy to-cite-blue p-0.5 shadow-md group-hover:shadow-cite-blue/20 group-hover:scale-105 transition-all flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            <path d="M2 12h20"></path>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="flex items-center gap-2">
+                            <span class="font-display font-extrabold text-2xl tracking-wider text-cite-navy leading-none">CITE</span>
+                            <span class="text-[10px] font-bold tracking-widest uppercase px-1.5 py-0.5 rounded bg-blue-50 text-cite-blue border border-blue-200">ONG</span>
+                        </div>
+                        <span class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-slate-500 leading-tight">
+                            Cámara Internacional de Talento y Empleabilidad
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#nosotros" class="text-sm font-semibold text-slate-600 hover:text-cite-blue transition-colors">Nosotros</a>
+                    <a href="#ejes" class="text-sm font-semibold text-slate-600 hover:text-cite-blue transition-colors">Ejes de Acción</a>
+                    <a href="#programas" class="text-sm font-semibold text-slate-600 hover:text-cite-blue transition-colors">Programas & Becas</a>
+                    <a href="#impacto" class="text-sm font-semibold text-slate-600 hover:text-cite-blue transition-colors">Impacto Social</a>
+                    <a href="#alianzas" class="text-sm font-semibold text-slate-600 hover:text-cite-blue transition-colors">Alianzas</a>
+                    <a href="#faq" class="text-sm font-semibold text-slate-600 hover:text-cite-blue transition-colors">Preguntas</a>
+                </nav>
+
+                <!-- Header CTA Buttons -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <button onclick="openModal('donacion')" class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-slate-700 hover:text-cite-blue transition-colors border border-slate-200 rounded-xl hover:border-slate-300">
+                        <i data-lucide="heart" class="w-3.5 h-3.5 text-rose-500 fill-rose-500/20"></i>
+                        Donar
+                    </button>
+                    <button onclick="openModal('registro')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-cite-blue hover:bg-blue-700 text-white text-xs font-bold shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/30 transition-all">
+                        <i data-lucide="user-plus" class="w-4 h-4"></i>
+                        <span>Sumarse a la Red</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex lg:hidden items-center gap-2">
+                    <button onclick="openModal('registro')" class="px-3 py-1.5 rounded-lg bg-cite-blue text-white text-xs font-bold">
+                        Unirse
+                    </button>
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors focus:outline-none" aria-label="Abrir Menú">
+                        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3 transition-all duration-300">
+            <a href="#nosotros" class="mobile-nav-link block py-2 text-base font-semibold text-slate-700 hover:text-cite-blue">Nosotros</a>
+            <a href="#ejes" class="mobile-nav-link block py-2 text-base font-semibold text-slate-700 hover:text-cite-blue">Ejes de Acción</a>
+            <a href="#programas" class="mobile-nav-link block py-2 text-base font-semibold text-slate-700 hover:text-cite-blue">Programas & Becas</a>
+            <a href="#impacto" class="mobile-nav-link block py-2 text-base font-semibold text-slate-700 hover:text-cite-blue">Impacto Social</a>
+            <a href="#alianzas" class="mobile-nav-link block py-2 text-base font-semibold text-slate-700 hover:text-cite-blue">Alianzas</a>
+            <a href="#faq" class="mobile-nav-link block py-2 text-base font-semibold text-slate-700 hover:text-cite-blue">Preguntas Frecuentes</a>
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+                <button onclick="openModal('donacion')" class="w-full flex items-center justify-center gap-2 py-2.5 px-4 text-sm font-bold text-slate-700 border border-slate-200 rounded-xl">
+                    <i data-lucide="heart" class="w-4 h-4 text-rose-500"></i> Donar al Fondo Social
+                </button>
+                <button onclick="openModal('registro')" class="w-full flex items-center justify-center gap-2 py-2.5 px-4 text-sm font-bold bg-cite-blue text-white rounded-xl shadow-md">
+                    <i data-lucide="user-plus" class="w-4 h-4"></i> Sumarse a CITE
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (DISRUPTIVA, TECNOLÓGICA Y DIGNA DE ASOCIACIÓN SIN FINES DE LUCRO: TALENTO VERIFICADO) -->
+    <section class="relative overflow-hidden pt-12 pb-24 lg:pt-20 lg:pb-32 bg-[#060B19] text-white">
+        <!-- Radial Glow & Subtle Grid Background -->
+        <div class="absolute inset-0 bg-grid-pattern-dark opacity-40 pointer-events-none"></div>
+        <div class="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-cyan-500/15 blur-[140px] pointer-events-none"></div>
+        <div class="absolute top-1/2 -left-32 w-[550px] h-[550px] rounded-full bg-blue-600/20 blur-[150px] pointer-events-none"></div>
+        <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-emerald-500/10 blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    
+                    <!-- Badges Row -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-slate-200 text-xs font-semibold backdrop-blur-md shadow-sm">
+                            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                            Asociación Internacional Sin Fines de Lucro
+                        </div>
+                        <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-bold backdrop-blur-md">
+                            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
+                            <span>SISTEMA DE TALENTO VERIFICADO</span>
+                        </div>
+                    </div>
+
+                    <!-- Main Disruptive Headline (Corto y Llamativo) -->
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold font-display tracking-tight text-white leading-[1.08]">
+                        El Poder del <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-emerald-400 drop-shadow-sm">
+                            TALENTO VERIFICADO
+                        </span>
+                    </h1>
+
+                    <!-- Hero Mission Subtitle (Conciso y Directo) -->
+                    <p class="text-base sm:text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                        Formación técnica de élite, certificación oficial y conexión directa con empleo digno en Latinoamérica y el Caribe. 100% sin costo para el postulante.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <button onclick="openModal('registro', 'talento')" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl font-extrabold text-white bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition-all text-sm sm:text-base border border-cyan-300/30">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-white"></i>
+                            <span>Postular a Talento Verificado</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 text-white"></i>
+                        </button>
+                        <button onclick="openModal('registro', 'empresa')" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-bold text-white bg-white/10 hover:bg-white/15 border border-white/20 backdrop-blur-md shadow-lg hover:shadow-xl transition-all text-sm sm:text-base hover:border-white/40">
+                            <i data-lucide="building" class="w-4 h-4 text-cyan-300"></i>
+                            <span>Vincular Organización / Aliados</span>
+                        </button>
+                    </div>
+
+                    <!-- Trust Bar Badges: Talento Verificado & Alcance Regional -->
+                    <div class="pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-left">
+                        <div class="border-l-2 border-cyan-400 pl-4">
+                            <div class="text-2xl sm:text-3xl font-extrabold text-white font-display">+28</div>
+                            <div class="text-xs text-slate-400 font-medium">Países en Latinoamérica y el Caribe</div>
+                        </div>
+                        <div class="border-l-2 border-blue-500 pl-4">
+                            <div class="text-2xl sm:text-3xl font-extrabold text-white font-display">+18,500</div>
+                            <div class="text-xs text-slate-400 font-medium">Talentos capacitados</div>
+                        </div>
+                        <div class="border-l-2 border-emerald-400 pl-4">
+                            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-display">100%</div>
+                            <div class="text-xs text-slate-300 font-bold">Talento Verificado CITE</div>
+                        </div>
+                        <div class="border-l-2 border-purple-400 pl-4">
+                            <div class="text-2xl sm:text-3xl font-extrabold text-white font-display">92%</div>
+                            <div class="text-xs text-slate-400 font-medium">Inserción laboral efectiva</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hero Right Interactive Card: CREDENCIAL HOLOGRÁFICA DE TALENTO VERIFICADO -->
+                <div class="lg:col-span-5 relative">
+                    
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Holographic ambient glow -->
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-emerald-400 rounded-3xl blur-xl opacity-30 animate-glow"></div>
+                        
+                        <!-- Main Card -->
+                        <div class="relative rounded-2xl bg-gradient-to-b from-[#0e172e]/95 via-[#0a1122]/95 to-[#060b19]/95 p-6 sm:p-8 text-white shadow-2xl border border-white/15 backdrop-blur-xl space-y-6">
+                            
+                            <!-- Card Header with Verified Badge -->
+                            <div class="flex items-center justify-between border-b border-white/10 pb-5">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-lg shadow-cyan-500/30">
+                                        <i data-lucide="award" class="w-7 h-7"></i>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center gap-2">
+                                            <h4 class="font-bold text-sm text-white tracking-wide">TALENTO VERIFICADO</h4>
+                                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                        </div>
+                                        <p class="text-[11px] text-cyan-300 font-mono">ID #CITE-VERIFIED-LATAM</p>
+                                    </div>
+                                </div>
+                                <span class="px-2.5 py-1 text-[10px] font-extrabold uppercase rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                                    Activo &bull; Oficial
+                                </span>
+                            </div>
+
+                            <!-- Live Candidate Profile Simulation -->
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1.5">
+                                        <span class="text-slate-300">Nivel de Idoneidad Laboral</span>
+                                        <span class="text-cyan-400 font-mono">98% Certificado</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                                        <div class="h-full bg-gradient-to-r from-cyan-400 via-blue-500 to-emerald-400 rounded-full" style="width: 98%"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Verified Attributes Checklist -->
+                                <div class="space-y-2.5 pt-1">
+                                    <div class="flex items-center gap-3 p-2.5 rounded-xl bg-white/5 border border-white/5 hover:border-cyan-500/30 transition-colors">
+                                        <div class="w-6 h-6 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                                            <i data-lucide="check" class="w-4 h-4"></i>
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <p class="text-xs font-bold text-white truncate">Competencias Tech & IA Aplicada</p>
+                                            <p class="text-[10px] text-slate-400">Validado bajo estándares ODS y mercado real</p>
+                                        </div>
+                                        <span class="text-[10px] font-mono text-emerald-400 font-semibold shrink-0">Aprobado</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-3 p-2.5 rounded-xl bg-white/5 border border-white/5 hover:border-cyan-500/30 transition-colors">
+                                        <div class="w-6 h-6 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0">
+                                            <i data-lucide="check" class="w-4 h-4"></i>
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <p class="text-xs font-bold text-white truncate">Validación Ética y Soft Skills</p>
+                                            <p class="text-[10px] text-slate-400">Liderazgo responsable, trabajo en equipo</p>
+                                        </div>
+                                        <span class="text-[10px] font-mono text-cyan-400 font-semibold shrink-0">Aprobado</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-3 p-2.5 rounded-xl bg-white/5 border border-white/5 hover:border-cyan-500/30 transition-colors">
+                                        <div class="w-6 h-6 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
+                                            <i data-lucide="check" class="w-4 h-4"></i>
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <p class="text-xs font-bold text-white truncate">Acreditación Criptográfica & QR</p>
+                                            <p class="text-[10px] text-slate-400">Consultable 24/7 por empleadores globales</p>
+                                        </div>
+                                        <span class="text-[10px] font-mono text-blue-400 font-semibold shrink-0">Verificable</span>
+                                    </div>
+                                </div>
+
+                                <!-- Trust Guarantee -->
+                                <div class="pt-3 border-t border-white/10 flex items-center justify-between text-xs">
+                                    <span class="flex items-center gap-1.5 text-slate-400">
+                                        <i data-lucide="heart-handshake" class="w-3.5 h-3.5 text-rose-400"></i> Beca Social 100% Financiada
+                                    </span>
+                                    <span class="text-emerald-400 font-semibold">Cero costo para el postulante</span>
+                                </div>
+
+                            </div>
+
+                            <!-- Interactive Button inside card -->
+                            <button onclick="openModal('registro', 'talento')" class="w-full py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-xs font-bold text-white flex items-center justify-center gap-2 transition-all">
+                                <i data-lucide="user-check" class="w-4 h-4 text-cyan-400"></i>
+                                Solicitar Acreditación de Talento
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: QUIÉNES SOMOS / IDENTIDAD INSTITUCIONAL -->
+    <section id="nosotros" class="py-20 bg-white border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="inline-block px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-blue-50 text-cite-blue border border-blue-200">
+                    Sobre Nuestra Organización
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-cite-navy">
+                    Una Institución Global al Servicio del Talento Humano
+                </h2>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    La <strong>Cámara Internacional de Talento y Empleabilidad (CITE)</strong> es una entidad sin fines de lucro que articula esfuerzos entre la sociedad civil, empresas responsables, gobiernos y academias para crear oportunidades laborales justas, inclusivas y sostenibles.
+                </p>
+            </div>
+
+            <!-- Pillars Grid con Imágenes -->
+            <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Box 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 hover:border-cite-blue/50 hover:shadow-xl transition-all duration-300 group flex flex-col">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&auto=format&fit=crop&q=80" alt="Misión CITE" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
+                        <span class="absolute bottom-3 left-4 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-600/90 text-white backdrop-blur-sm">
+                            Propósito
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-cite-navy mb-2 group-hover:text-cite-blue transition-colors">Misión Centrada</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Desarrollar y certificar las competencias técnicas y éticas de talentos vulnerables, vinculándolos con puestos dignos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 hover:border-teal-500/50 hover:shadow-xl transition-all duration-300 group flex flex-col">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&auto=format&fit=crop&q=80" alt="Visión 2030 CITE" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
+                        <span class="absolute bottom-3 left-4 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-teal-600/90 text-white backdrop-blur-sm">
+                            Futuro
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-cite-navy mb-2 group-hover:text-teal-600 transition-colors">Visión 2030</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Consolidar el mayor ecosistema sin fines de lucro de empleabilidad en la región, donde el mérito sea la única puerta de entrada.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 hover:border-indigo-500/50 hover:shadow-xl transition-all duration-300 group flex flex-col">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&auto=format&fit=crop&q=80" alt="Valores Fundacionales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
+                        <span class="absolute bottom-3 left-4 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-indigo-600/90 text-white backdrop-blur-sm">
+                            Ética
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-cite-navy mb-2 group-hover:text-indigo-600 transition-colors">Valores Fundacionales</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Justicia social, equidad de género, no discriminación, transparencia de fondos y trabajo digno para todos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 hover:border-emerald-500/50 hover:shadow-xl transition-all duration-300 group flex flex-col">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&auto=format&fit=crop&q=80" alt="Sello Ético CITE" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
+                        <span class="absolute bottom-3 left-4 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-600/90 text-white backdrop-blur-sm">
+                            Garantía
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-cite-navy mb-2 group-hover:text-emerald-600 transition-colors">Sello Ético CITE</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Programas 100% financiados y supervisión de convenios de remuneración justa en empresas aliadas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Manifest Banner Box: Compromiso Social y ODS -->
+            <div class="mt-12 rounded-2xl bg-gradient-to-r from-cite-navy via-slate-900 to-cite-dark text-white p-8 lg:p-10 shadow-xl border border-white/10 flex flex-col lg:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 max-w-2xl">
+                    <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Compromiso con el Trabajo Decente</span>
+                    <h4 class="text-xl sm:text-2xl font-bold font-display">Democratizando Oportunidades en Latinoamérica y el Caribe</h4>
+                    <p class="text-sm text-slate-300">
+                        Como asociación sin fines de lucro, garantizamos que el talento vulnerable acceda a competencias de alto valor y acreditación de Talento Verificado sin barreras socioeconómicas.
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button onclick="openModal('registro', 'talento')" class="px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-cite-blue hover:from-cyan-400 hover:to-blue-600 text-white font-bold text-xs sm:text-sm transition-all flex items-center gap-2 shadow-lg">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-white"></i>
+                        Postular a Talento Verificado
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: EJES DE ACCIÓN -->
+    <section id="ejes" class="py-20 bg-slate-50 border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="inline-block px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-teal-50 text-teal-700 border border-teal-200">
+                    Metodología de Impacto
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-cite-navy">
+                    Nuestros 4 Ejes de Transformación Laboral
+                </h2>
+                <p class="text-slate-600 text-base">
+                    Un modelo de intervención integral que acompaña al candidato desde su diagnóstico formativo hasta su estabilidad y crecimiento en el puesto de trabajo.
+                </p>
+            </div>
+
+            <!-- Grid of 4 Pillars con Imágenes -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Eje 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=700&auto=format&fit=crop&q=80" alt="Formación Tech & IA" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute top-4 left-4 w-10 h-10 rounded-xl bg-blue-600/90 text-white flex items-center justify-center backdrop-blur-sm shadow">
+                                <i data-lucide="cpu" class="w-5 h-5"></i>
+                            </div>
+                            <span class="absolute bottom-3 left-4 text-xs font-bold text-white uppercase tracking-wider font-display">
+                                Eje 01 &bull; Capacitación Práctica
+                            </span>
+                        </div>
+                        <div class="p-8 space-y-4">
+                            <h3 class="text-xl font-bold text-cite-navy group-hover:text-cite-blue transition-colors">Formación en Competencias del Futuro</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Diseñamos rutas de aprendizaje intensivas: Inteligencia Artificial generativa, analítica de datos, gestión ágil de proyectos y soft skills demandadas por empresas globales.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-8 pb-8 pt-0">
+                        <ul class="pt-4 border-t border-slate-100 space-y-2 text-xs text-slate-500 font-medium">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Currícula actualizada trimestralmente</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Proyectos reales evaluados por líderes de la industria</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Eje 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=700&auto=format&fit=crop&q=80" alt="Certificación Internacional de Empleabilidad" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute top-4 left-4 w-10 h-10 rounded-xl bg-teal-600/90 text-white flex items-center justify-center backdrop-blur-sm shadow">
+                                <i data-lucide="badge-check" class="w-5 h-5"></i>
+                            </div>
+                            <span class="absolute bottom-3 left-4 text-xs font-bold text-white uppercase tracking-wider font-display">
+                                Eje 02 &bull; Talento Verificado
+                            </span>
+                        </div>
+                        <div class="p-8 space-y-4">
+                            <h3 class="text-xl font-bold text-cite-navy group-hover:text-teal-600 transition-colors">Certificación Internacional de Empleabilidad (CIE)</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Emitimos credenciales digitales con respaldo internacional que validan competencias técnicas, adaptabilidad y ética laboral, eliminando sesgos en los procesos de selección.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-8 pb-8 pt-0">
+                        <ul class="pt-4 border-t border-slate-100 space-y-2 text-xs text-slate-500 font-medium">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Credencial digital verificable con código QR único</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Reconocida por nuestra red internacional de aliados éticos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Eje 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&auto=format&fit=crop&q=80" alt="Bolsa Ética y Vinculación Laboral" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute top-4 left-4 w-10 h-10 rounded-xl bg-indigo-600/90 text-white flex items-center justify-center backdrop-blur-sm shadow">
+                                <i data-lucide="network" class="w-5 h-5"></i>
+                            </div>
+                            <span class="absolute bottom-3 left-4 text-xs font-bold text-white uppercase tracking-wider font-display">
+                                Eje 03 &bull; Inserción Real
+                            </span>
+                        </div>
+                        <div class="p-8 space-y-4">
+                            <h3 class="text-xl font-bold text-cite-navy group-hover:text-indigo-600 transition-colors">Bolsa Ética y Vinculación Laboral</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                No cobramos a los postulantes por acceder a empleos. Conectamos directamente el talento certificado con empresas que ofrecen contratos justos, esquemas híbridos/remotos y planes de carrera.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-8 pb-8 pt-0">
+                        <ul class="pt-4 border-t border-slate-100 space-y-2 text-xs text-slate-500 font-medium">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Tasa de colocación superior al 85% en los primeros 120 días</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Supervisión de condiciones laborales dignas (ODS 8)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Eje 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=700&auto=format&fit=crop&q=80" alt="Red de Mentoría Global" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute top-4 left-4 w-10 h-10 rounded-xl bg-emerald-600/90 text-white flex items-center justify-center backdrop-blur-sm shadow">
+                                <i data-lucide="users" class="w-5 h-5"></i>
+                            </div>
+                            <span class="absolute bottom-3 left-4 text-xs font-bold text-white uppercase tracking-wider font-display">
+                                Eje 04 &bull; Acompañamiento 1 a 1
+                            </span>
+                        </div>
+                        <div class="p-8 space-y-4">
+                            <h3 class="text-xl font-bold text-cite-navy group-hover:text-emerald-600 transition-colors">Red de Mentoría Global y Voluntariado</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Directivos y especialistas de empresas líderes donan tiempo para asesorar a los talentos en entrevistas de alto impacto, negociación salarial y visión de liderazgo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-8 pb-8 pt-0">
+                        <ul class="pt-4 border-t border-slate-100 space-y-2 text-xs text-slate-500 font-medium">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Más de 350 mentores corporativos voluntarios</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Sesiones virtuales de preparación para entrevistas internacionales</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: PROGRAMAS Y BECAS ACTIVAS -->
+    <section id="programas" class="py-20 bg-white border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div class="space-y-3 max-w-2xl">
+                    <span class="inline-block px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-blue-50 text-cite-blue border border-blue-200">
+                        Iniciativas Vigentes
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-cite-navy">
+                        Programas de Formación y Becas Comunitarias
+                    </h2>
+                    <p class="text-slate-600 text-base">
+                        Conoce las convocatorias abiertas. Si cumples los requisitos de postulación, el costo del programa es cubierto en su totalidad por el fondo social CITE.
+                    </p>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="flex items-center flex-wrap gap-2">
+                    <button class="filter-btn active px-4 py-2 rounded-xl text-xs font-bold bg-cite-navy text-white transition-all" data-filter="todos">
+                        Todos
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all" data-filter="jovenes">
+                        Talento Joven
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all" data-filter="profesionales">
+                        Profesionales
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all" data-filter="empresas">
+                        Empresas Aliadas
+                    </button>
+                </div>
+            </div>
+
+            <!-- Programs Grid con Imágenes -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="programs-grid">
+                
+                <!-- Program Card 1 -->
+                <div class="program-card bg-white rounded-2xl border border-slate-200/80 overflow-hidden flex flex-col justify-between hover:shadow-xl hover:border-cite-blue/40 transition-all duration-300 group" data-category="jovenes">
+                    <div>
+                        <div class="h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&auto=format&fit=crop&q=80" alt="CITE NextGen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/30 to-transparent"></div>
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-500/90 text-white backdrop-blur-sm shadow">
+                                Beca 100% Financiada
+                            </span>
+                            <span class="absolute bottom-3 left-3 text-xs text-slate-200 font-semibold flex items-center gap-1">
+                                <i data-lucide="clock" class="w-3.5 h-3.5 text-cyan-400"></i> 12 Semanas &bull; Online
+                            </span>
+                        </div>
+                        <div class="p-6 pb-2">
+                            <h3 class="text-xl font-bold text-cite-navy group-hover:text-cite-blue transition-colors">CITE NextGen: Primer Empleo Digital</h3>
+                        </div>
+                        <div class="px-6 pb-6 space-y-4">
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Diseñado para jóvenes de 18 a 28 años en situación de subempleo o primer empleo. Incluye nivelación técnica, habilidades comunicacionales y conexión con pasantías remuneradas.
+                            </p>
+                            <div class="space-y-2 pt-2 border-t border-slate-100 text-xs text-slate-600">
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Sin costo de matrícula ni mensualidad</div>
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Asesoría de CV y simulación de entrevistas</div>
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Asignación de mentor profesional individual</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('registro', 'talento', 'CITE NextGen: Primer Empleo')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-cite-blue hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 shadow-sm">
+                            Postular a Convocatoria <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Program Card 2 -->
+                <div class="program-card bg-white rounded-2xl border border-slate-200/80 overflow-hidden flex flex-col justify-between hover:shadow-xl hover:border-cite-blue/40 transition-all duration-300 group" data-category="profesionales">
+                    <div>
+                        <div class="h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80" alt="IA y Habilidades del Futuro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/30 to-transparent"></div>
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-600/90 text-white backdrop-blur-sm shadow">
+                                Reskilling & IA
+                            </span>
+                            <span class="absolute bottom-3 left-3 text-xs text-slate-200 font-semibold flex items-center gap-1">
+                                <i data-lucide="clock" class="w-3.5 h-3.5 text-cyan-400"></i> 8 Semanas &bull; Híbrido
+                            </span>
+                        </div>
+                        <div class="p-6 pb-2">
+                            <h3 class="text-xl font-bold text-cite-navy group-hover:text-cite-blue transition-colors">IA y Habilidades del Futuro</h3>
+                        </div>
+                        <div class="px-6 pb-6 space-y-4">
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Formación avanzada para profesionales que necesitan actualizar sus capacidades hacia la economía impulsada por Inteligencia Artificial, automatización y análisis de datos de negocio.
+                            </p>
+                            <div class="space-y-2 pt-2 border-t border-slate-100 text-xs text-slate-600">
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Laboratorios prácticos con herramientas líderes</div>
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Certificado con validez internacional</div>
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Acceso preferente a red de reclutadores tech</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('registro', 'talento', 'IA y Habilidades del Futuro')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-cite-navy hover:bg-slate-800 transition-colors flex items-center justify-center gap-2 shadow-sm">
+                            Postular a Convocatoria <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Program Card 3 -->
+                <div class="program-card bg-white rounded-2xl border border-slate-200/80 overflow-hidden flex flex-col justify-between hover:shadow-xl hover:border-cite-blue/40 transition-all duration-300 group" data-category="empresas">
+                    <div>
+                        <div class="h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&auto=format&fit=crop&q=80" alt="Sello Empresa con Talento" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/30 to-transparent"></div>
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-600/90 text-white backdrop-blur-sm shadow">
+                                Alianza Corporativa
+                            </span>
+                            <span class="absolute bottom-3 left-3 text-xs text-slate-200 font-semibold flex items-center gap-1">
+                                <i data-lucide="shield" class="w-3.5 h-3.5 text-cyan-400"></i> Anual &bull; Institucional
+                            </span>
+                        </div>
+                        <div class="p-6 pb-2">
+                            <h3 class="text-xl font-bold text-cite-navy group-hover:text-purple-600 transition-colors">Sello Empresa con Talento</h3>
+                        </div>
+                        <div class="px-6 pb-6 space-y-4">
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Distinción y membresía institucional para empresas que apuestan por la contratación inclusiva, la equidad salarial y la formación continua de sus colaboradores.
+                            </p>
+                            <div class="space-y-2 pt-2 border-t border-slate-100 text-xs text-slate-600">
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Acceso directo a bolsa de talento verificado</div>
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Evaluación y estándares de empleabilidad ética</div>
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Reporte anual de RSE y visibilidad global</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('registro', 'empresa', 'Sello Empresa con Talento')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-cite-navy hover:text-white bg-slate-200 hover:bg-cite-navy border border-slate-300 transition-all flex items-center justify-center gap-2">
+                            Sumar a mi Organización <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Program Card 4 -->
+                <div class="program-card bg-white rounded-2xl border border-slate-200/80 overflow-hidden flex flex-col justify-between hover:shadow-xl hover:border-cite-blue/40 transition-all duration-300 group" data-category="profesionales">
+                    <div>
+                        <div class="h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&auto=format&fit=crop&q=80" alt="Red de Mentores Globales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/30 to-transparent"></div>
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-teal-600/90 text-white backdrop-blur-sm shadow">
+                                Voluntariado
+                            </span>
+                            <span class="absolute bottom-3 left-3 text-xs text-slate-200 font-semibold flex items-center gap-1">
+                                <i data-lucide="clock" class="w-3.5 h-3.5 text-cyan-400"></i> 2 hrs/mes &bull; Remoto
+                            </span>
+                        </div>
+                        <div class="p-6 pb-2">
+                            <h3 class="text-xl font-bold text-cite-navy group-hover:text-teal-600 transition-colors">Red de Mentores Globales</h3>
+                        </div>
+                        <div class="px-6 pb-6 space-y-4">
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Programa donde ejecutivos de alto rango donan su tiempo para guiar el desarrollo de postulantes en situaciones desfavorables, abriendo redes de contacto y perspectiva estratégica.
+                            </p>
+                            <div class="space-y-2 pt-2 border-t border-slate-100 text-xs text-slate-600">
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Metodología estructurada de acompañamiento</div>
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Encuentros internacionales de networking de líderes</div>
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Reconocimiento público de impacto social</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('registro', 'mentor', 'Red de Mentores Globales')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-slate-700 hover:text-white bg-slate-200 hover:bg-teal-700 border border-slate-300 transition-all flex items-center justify-center gap-2">
+                            Postular como Mentor <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Program Card 5 -->
+                <div class="program-card bg-white rounded-2xl border border-slate-200/80 overflow-hidden flex flex-col justify-between hover:shadow-xl hover:border-cite-blue/40 transition-all duration-300 group" data-category="jovenes">
+                    <div>
+                        <div class="h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&auto=format&fit=crop&q=80" alt="Mujeres en Tecnología & Datos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/30 to-transparent"></div>
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-rose-600/90 text-white backdrop-blur-sm shadow">
+                                Equidad de Género
+                            </span>
+                            <span class="absolute bottom-3 left-3 text-xs text-slate-200 font-semibold flex items-center gap-1">
+                                <i data-lucide="clock" class="w-3.5 h-3.5 text-cyan-400"></i> 10 Semanas &bull; Online
+                            </span>
+                        </div>
+                        <div class="p-6 pb-2">
+                            <h3 class="text-xl font-bold text-cite-navy group-hover:text-rose-600 transition-colors">Mujeres en Tecnología & Datos</h3>
+                        </div>
+                        <div class="px-6 pb-6 space-y-4">
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Iniciativa de becas completas orientada a reducir la brecha de género en carreras STEM, facilitando acceso a formación práctica en cloud, ciberseguridad y analítica aplicada.
+                            </p>
+                            <div class="space-y-2 pt-2 border-t border-slate-100 text-xs text-slate-600">
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> 100% financiado por donaciones internacionales</div>
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Mentoría con mujeres líderes del sector tech</div>
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Vinculación prioritaria con empresas aliadas</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('registro', 'talento', 'Mujeres en Tecnología & Datos')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-cite-blue hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 shadow-sm">
+                            Postular a Convocatoria <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Program Card 6 -->
+                <div class="program-card bg-white rounded-2xl border border-slate-200/80 overflow-hidden flex flex-col justify-between hover:shadow-xl hover:border-cite-blue/40 transition-all duration-300 group" data-category="empresas">
+                    <div>
+                        <div class="h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600&auto=format&fit=crop&q=80" alt="Ferias Internacionales de Empleo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/30 to-transparent"></div>
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-600/90 text-white backdrop-blur-sm shadow">
+                                Empleabilidad Abierta
+                            </span>
+                            <span class="absolute bottom-3 left-3 text-xs text-slate-200 font-semibold flex items-center gap-1">
+                                <i data-lucide="calendar" class="w-3.5 h-3.5 text-cyan-400"></i> Trimestral &bull; Virtual
+                            </span>
+                        </div>
+                        <div class="p-6 pb-2">
+                            <h3 class="text-xl font-bold text-cite-navy group-hover:text-amber-600 transition-colors">Ferias Internacionales de Empleo</h3>
+                        </div>
+                        <div class="px-6 pb-6 space-y-4">
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Jornadas virtuales de reclutamiento donde candidatos certificados presentan sus proyectos en vivo a directores de talento humano de diversos países, con rondas de entrevistas directas.
+                            </p>
+                            <div class="space-y-2 pt-2 border-t border-slate-100 text-xs text-slate-600">
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Puestos de trabajo remotos y presenciales</div>
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Participación sin costo para talentos certificados</div>
+                                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cite-blue"></i> Talleres en vivo de pitch profesional</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('registro', 'talento', 'Ferias Internacionales de Empleo')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-cite-navy hover:text-white bg-slate-200 hover:bg-cite-navy border border-slate-300 transition-all flex items-center justify-center gap-2">
+                            Registrarme a la Feria <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: IMPACTO SOCIAL & MÉTRICAS AUDITADAS -->
+    <section id="impacto" class="py-20 bg-gradient-to-b from-cite-navy via-slate-900 to-[#070D1E] text-white relative overflow-hidden">
+        
+        <div class="absolute inset-0 bg-grid-pattern-dark opacity-30 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="inline-block px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                    Resultados Verificables
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white">
+                    El Impacto Real de Nuestra Comunidad
+                </h2>
+                <p class="text-slate-400 text-base">
+                    Cada cifra representa vidas transformadas, familias con mayor estabilidad económica y empresas con equipos más diversos, éticos y competentes.
+                </p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center backdrop-blur-sm hover:border-cyan-400/40 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <div class="text-4xl lg:text-5xl font-extrabold font-display text-white tracking-tight">
+                        +<span class="counter" data-target="18500">0</span>
+                    </div>
+                    <div class="text-sm font-semibold text-slate-300 mt-2">Talentos Capacitados</div>
+                    <div class="text-xs text-slate-400 mt-1">Egresados con certificación oficial</div>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center backdrop-blur-sm hover:border-blue-400/40 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="trending-up" class="w-6 h-6"></i>
+                    </div>
+                    <div class="text-4xl lg:text-5xl font-extrabold font-display text-white tracking-tight">
+                        <span class="counter" data-target="92">0</span>%
+                    </div>
+                    <div class="text-sm font-semibold text-slate-300 mt-2">Inserción Laboral</div>
+                    <div class="text-xs text-slate-400 mt-1">Empleo formal antes de 6 meses</div>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center backdrop-blur-sm hover:border-emerald-400/40 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <div class="text-4xl lg:text-5xl font-extrabold font-display text-emerald-400 tracking-tight">
+                        <span class="counter" data-target="100">0</span>%
+                    </div>
+                    <div class="text-sm font-semibold text-slate-200 mt-2">Talento Verificado</div>
+                    <div class="text-xs text-slate-400 mt-1">Acreditación técnica y ética CITE</div>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center backdrop-blur-sm hover:border-amber-400/40 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="globe-2" class="w-6 h-6"></i>
+                    </div>
+                    <div class="text-4xl lg:text-5xl font-extrabold font-display text-white tracking-tight">
+                        <span class="counter" data-target="28">0</span>
+                    </div>
+                    <div class="text-sm font-semibold text-slate-300 mt-2">Países Activos</div>
+                    <div class="text-xs text-slate-400 mt-1">Red en Latinoamérica y el Caribe</div>
+                </div>
+
+            </div>
+
+            <!-- Quote / Testimonial of Integrity -->
+            <div class="mt-16 max-w-4xl mx-auto rounded-2xl bg-white/5 border border-white/10 p-8 text-center backdrop-blur-sm">
+                <i data-lucide="quote" class="w-8 h-8 text-cyan-400 mx-auto mb-4 opacity-75"></i>
+                <p class="text-base sm:text-lg text-slate-200 italic leading-relaxed">
+                    "El verdadero desarrollo económico no se mide en números abstractos, sino en la dignidad de cada persona que encuentra un trabajo que reconoce su esfuerzo y le permite construir un proyecto de vida libre y seguro."
+                </p>
+                <div class="mt-4">
+                    <h5 class="font-bold text-white text-sm">Dra. Valeria Montesinos</h5>
+                    <p class="text-xs text-slate-400">Comité Asesor de Impacto Social &bull; CITE Internacional</p>
+                </div>
+                <div class="mt-6">
+                    <button onclick="openModal('donacion')" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white font-bold text-xs shadow-lg transition-all">
+                        <i data-lucide="heart" class="w-4 h-4"></i> Apoyar el Fondo de Becas CITE
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: ECOSISTEMA DE ALIANZAS -->
+    <section id="alianzas" class="py-20 bg-white border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="inline-block px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-slate-100 text-slate-800">
+                    Articulación Multilateral
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-cite-navy">
+                    Ecosistema Institucional de Cooperación
+                </h2>
+                <p class="text-slate-600 text-base">
+                    Colaboramos estrechamente con cámaras de comercio binacionales, redes empresariales, fundaciones filantrópicas y centros de educación superior.
+                </p>
+            </div>
+
+            <!-- Categories of Partners -->
+            <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-6">
+                
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center hover:bg-slate-100 transition-colors">
+                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-cite-blue mx-auto flex items-center justify-center mb-3">
+                        <i data-lucide="landmark" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-cite-navy">Cámaras Binacionales</h4>
+                    <p class="text-xs text-slate-500 mt-1">Convenios de movilidad laboral y estándares de formación</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center hover:bg-slate-100 transition-colors">
+                    <div class="w-10 h-10 rounded-lg bg-teal-100 text-teal-600 mx-auto flex items-center justify-center mb-3">
+                        <i data-lucide="briefcase" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-cite-navy">Sector Tecnológico</h4>
+                    <p class="text-xs text-slate-500 mt-1">Empresas suscritas a contratación sin sesgos</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center hover:bg-slate-100 transition-colors">
+                    <div class="w-10 h-10 rounded-lg bg-indigo-100 text-indigo-600 mx-auto flex items-center justify-center mb-3">
+                        <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-cite-navy">Universidades & Hubs</h4>
+                    <p class="text-xs text-slate-500 mt-1">+30 Centros educativos y de investigación aplicada</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center hover:bg-slate-100 transition-colors">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center mb-3">
+                        <i data-lucide="globe" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-cite-navy">Organismos Globales</h4>
+                    <p class="text-xs text-slate-500 mt-1">Convenios de cooperación para el desarrollo sostenible</p>
+                </div>
+
+            </div>
+
+            <!-- Partner Badges Display -->
+            <div class="mt-10 p-8 rounded-2xl border border-slate-200 bg-gradient-to-r from-slate-50 via-white to-slate-50 flex flex-wrap items-center justify-around gap-8 text-slate-400 grayscale hover:grayscale-0 transition-all duration-300">
+                <div class="flex items-center gap-2 font-display font-bold text-lg text-slate-600">
+                    <i data-lucide="layers" class="w-6 h-6 text-cite-blue"></i> GLOBAL ALLIANCE
+                </div>
+                <div class="flex items-center gap-2 font-display font-bold text-lg text-slate-600">
+                    <i data-lucide="cpu" class="w-6 h-6 text-cyan-600"></i> TECH FUTURES LAB
+                </div>
+                <div class="flex items-center gap-2 font-display font-bold text-lg text-slate-600">
+                    <i data-lucide="briefcase" class="w-6 h-6 text-indigo-600"></i> RED DE EMPLEO LATAM & CARIBE
+                </div>
+                <div class="flex items-center gap-2 font-display font-bold text-lg text-slate-600">
+                    <i data-lucide="award" class="w-6 h-6 text-amber-600"></i> ETHICAL WORK FORUM
+                </div>
+                <div class="flex items-center gap-2 font-display font-bold text-lg text-slate-600">
+                    <i data-lucide="network" class="w-6 h-6 text-emerald-600"></i> TALENT NETWORK LATAM
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <button onclick="openModal('registro', 'empresa')" class="inline-flex items-center gap-2 text-xs font-bold text-cite-blue hover:text-blue-800 underline underline-offset-4">
+                    ¿Tu institución desea unirse como aliada? Solicita un convenio de cooperación <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: TESTIMONIOS DE LA COMUNIDAD -->
+    <section class="py-20 bg-slate-50 border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="inline-block px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-blue-50 text-cite-blue border border-blue-200">
+                    Voces de Nuestra Red
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-cite-navy">
+                    Historias que Inspiran Transformación
+                </h2>
+                <p class="text-slate-600 text-base">
+                    Conoce las experiencias de egresados, empresas empleadoras y mentores voluntarios que forman parte activa del movimiento CITE.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Testimonio 1: Egresado -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-1 text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-slate-600 italic leading-relaxed">
+                            "Postulé a la beca CITE NextGen sin experiencia previa y con muchas dudas. En 12 semanas no solo dominé herramientas de analítica y datos, sino que un mentor me preparó para entrevistas internacionales. Hoy trabajo en remoto con salario digno y estabilidad."
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-100 flex items-center gap-4 mt-6">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80" alt="Lucía Méndez" class="w-12 h-12 rounded-full object-cover border-2 border-cite-blue">
+                        <div>
+                            <h4 class="text-sm font-bold text-cite-navy">Lucía Méndez</h4>
+                            <p class="text-xs text-slate-500">Analista de Datos Junior &bull; Colombia</p>
+                            <span class="inline-block mt-0.5 text-[10px] font-semibold text-emerald-600">Egresada Beca CITE 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2: Empresa Aliada -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-1 text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-slate-600 italic leading-relaxed">
+                            "El Sello Empresa con Talento nos permitió acceder a profesionales evaluados rigurosamente no solo en lo técnico sino en ética de trabajo. Hemos integrado a más de 15 personas egresadas de CITE con una retención laboral del 100% al primer año."
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-100 flex items-center gap-4 mt-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80" alt="Ing. Marco Benavides" class="w-12 h-12 rounded-full object-cover border-2 border-teal-500">
+                        <div>
+                            <h4 class="text-sm font-bold text-cite-navy">Ing. Marco Benavides</h4>
+                            <p class="text-xs text-slate-500">VP de Talento Humano &bull; CloudGlobal</p>
+                            <span class="inline-block mt-0.5 text-[10px] font-semibold text-teal-600">Empresa Aliada Suscrita</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3: Mentor Voluntario -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-1 text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-slate-600 italic leading-relaxed">
+                            "Donar dos horas al mes como mentor en CITE ha sido una de las experiencias profesionales más enriquecedoras. Guiar a jóvenes con talento extraordinario que solo necesitaban dirección y confianza es devolver a la sociedad lo mejor que tenemos."
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-100 flex items-center gap-4 mt-6">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&auto=format&fit=crop&q=80" alt="Dra. Elena San Román" class="w-12 h-12 rounded-full object-cover border-2 border-indigo-500">
+                        <div>
+                            <h4 class="text-sm font-bold text-cite-navy">Dra. Elena San Román</h4>
+                            <p class="text-xs text-slate-500">Directora de Operaciones &bull; España</p>
+                            <span class="inline-block mt-0.5 text-[10px] font-semibold text-indigo-600">Mentora Voluntaria CITE</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: PREGUNTAS FRECUENTES (FAQ ACCORDION) -->
+    <section id="faq" class="py-20 bg-white border-b border-slate-200/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center space-y-4 mb-12">
+                <span class="inline-block px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-slate-100 text-slate-800">
+                    Resolviendo Dudas
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-cite-navy">
+                    Preguntas Frecuentes
+                </h2>
+                <p class="text-slate-600 text-base">
+                    Todo lo que necesitas saber sobre nuestra organización sin fines de lucro, becas y modelo de financiamiento.
+                </p>
+            </div>
+
+            <!-- Accordion Items -->
+            <div class="space-y-4" id="faq-accordion">
+                
+                <div class="faq-item border border-slate-200 rounded-xl overflow-hidden transition-colors">
+                    <button class="faq-trigger w-full px-6 py-4 text-left font-bold text-cite-navy flex items-center justify-between hover:bg-slate-50 focus:outline-none">
+                        <span class="text-sm sm:text-base">¿Las becas y programas de CITE tienen algún costo para el participante?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 pt-1 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        No. Como organización sin fines de lucro, el 100% de nuestras becas y capacitaciones para jóvenes y profesionales en situación de vulnerabilidad o desempleo son totalmente gratuitas. Los costos operativos y académicos son cubiertos por donantes institucionales, fondos filantrópicos y empresas aliadas.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-slate-200 rounded-xl overflow-hidden transition-colors">
+                    <button class="faq-trigger w-full px-6 py-4 text-left font-bold text-cite-navy flex items-center justify-between hover:bg-slate-50 focus:outline-none">
+                        <span class="text-sm sm:text-base">¿Qué validez tiene la Certificación Internacional CITE?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 pt-1 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        El Sello y Certificación de Empleabilidad CITE cuenta con respaldo de nuestra red de organizaciones e instituciones aliadas en 28 países de Latinoamérica y el Caribe. Cada certificado incluye un código QR criptográfico único y enlace verificable que comprueba que el postulante es Talento Verificado y ha superado las evaluaciones técnicas, éticas y de soft skills.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-slate-200 rounded-xl overflow-hidden transition-colors">
+                    <button class="faq-trigger w-full px-6 py-4 text-left font-bold text-cite-navy flex items-center justify-between hover:bg-slate-50 focus:outline-none">
+                        <span class="text-sm sm:text-base">¿Cómo se financia CITE si los programas son gratuitos?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 pt-1 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        Nos financiamos a través de subvenciones filantrópicas internacionales, donaciones voluntarias deducibles de impuestos de corporaciones aliadas y convenios de responsabilidad social empresarial (RSE). Ni los candidatos ni los becarios realizan pagos a la institución.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-slate-200 rounded-xl overflow-hidden transition-colors">
+                    <button class="faq-trigger w-full px-6 py-4 text-left font-bold text-cite-navy flex items-center justify-between hover:bg-slate-50 focus:outline-none">
+                        <span class="text-sm sm:text-base">¿Cómo puede mi empresa incorporar talento egresado de CITE?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 pt-1 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        Cualquier empresa formal interesada en contratación ética puede suscribirse de forma gratuita al convenio "Empresa con Talento". Al hacerlo, acceden a nuestro directorio de egresados certificados, participan en ferias de empleo exclusivas y reciben apoyo en la intermediación laboral sin cobro de comisión por contratación.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-slate-200 rounded-xl overflow-hidden transition-colors">
+                    <button class="faq-trigger w-full px-6 py-4 text-left font-bold text-cite-navy flex items-center justify-between hover:bg-slate-50 focus:outline-none">
+                        <span class="text-sm sm:text-base">¿Qué requisitos necesito para ser mentor voluntario?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 pt-1 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        Buscamos profesionales con al menos 5 años de experiencia en áreas tecnológicas, recursos humanos, gestión de proyectos, ventas o liderazgo. El compromiso mínimo es de 2 a 4 horas mensuales en sesiones virtuales 1 a 1 previamente agendadas.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: CALL TO ACTION MULTI-PERFIL -->
+    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="rounded-3xl bg-gradient-to-r from-cite-navy via-cite-dark to-slate-900 border border-white/10 p-8 sm:p-14 text-center space-y-8 shadow-2xl">
+                <span class="inline-block px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                    Forma Parte del Movimiento
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold font-display max-w-3xl mx-auto leading-tight">
+                    ¿Cuál es tu rol en la transformación del empleo?
+                </h2>
+                <p class="text-slate-300 text-base max-w-2xl mx-auto leading-relaxed">
+                    Tanto si buscas una oportunidad que impulse tu futuro laboral, como si representas a una organización comprometida con el impacto social, en CITE tienes un lugar.
+                </p>
+
+                <!-- 3 Pathway Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left pt-6 max-w-5xl mx-auto">
+                    
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center mb-4">
+                                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-lg text-white mb-2">Para Candidatos</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Accede a formación gratuita, certificación internacional y vinculación con empleos dignos.
+                            </p>
+                        </div>
+                        <button onclick="openModal('registro', 'talento')" class="mt-6 w-full py-2.5 px-4 rounded-xl bg-cite-blue hover:bg-blue-600 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                            Postular a Becas <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-teal-500/20 text-teal-400 flex items-center justify-center mb-4">
+                                <i data-lucide="building" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-lg text-white mb-2">Para Empresas & Aliados</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Contrata talento verificado sin comisiones y fortalece el compromiso social de tu organización.
+                            </p>
+                        </div>
+                        <button onclick="openModal('registro', 'empresa')" class="mt-6 w-full py-2.5 px-4 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                            Unir mi Empresa <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center mb-4">
+                                <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-lg text-white mb-2">Mentores y Donantes</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Comparte tu experiencia ejecutiva o apoya con fondos deducibles para multiplicar becas.
+                            </p>
+                        </div>
+                        <button onclick="openModal('registro', 'mentor')" class="mt-6 w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                            Sumarme como Mentor <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER INSTITUCIONAL -->
+    <footer class="bg-cite-navy text-slate-400 text-xs border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+                
+                <!-- Columna 1: Brand & Misión -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-cite-blue p-0.5 flex items-center justify-center text-white">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                <path d="M2 12h20"></path>
+                            </svg>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-display font-extrabold text-xl text-white tracking-wider">CITE</span>
+                            <span class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold">Cámara Internacional de Talento y Empleabilidad</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed max-w-md">
+                        Organización no gubernamental sin fines de lucro comprometida con el desarrollo social, la capacitación técnica y la inserción laboral de comunidades y profesionales en el ámbito global.
+                    </p>
+                    <div class="pt-2 flex items-center gap-3 text-slate-400">
+                        <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-cite-blue hover:text-white flex items-center justify-center transition-colors" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-cite-blue hover:text-white flex items-center justify-center transition-colors" aria-label="Twitter / X"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-cite-blue hover:text-white flex items-center justify-center transition-colors" aria-label="YouTube"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-cite-blue hover:text-white flex items-center justify-center transition-colors" aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Navegación -->
+                <div class="space-y-3">
+                    <h5 class="text-sm font-bold text-white tracking-wide">Institución</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#nosotros" class="hover:text-white transition-colors">Quiénes Somos</a></li>
+                        <li><a href="#ejes" class="hover:text-white transition-colors">Ejes de Acción</a></li>
+                        <li><a href="#impacto" class="hover:text-white transition-colors">Impacto Social</a></li>
+                        <li><a href="#alianzas" class="hover:text-white transition-colors">Ecosistema de Alianzas</a></li>
+                        <li><a href="#nosotros" class="hover:text-white transition-colors">Código de Ética y Valores</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Programas -->
+                <div class="space-y-3">
+                    <h5 class="text-sm font-bold text-white tracking-wide">Programas & Becas</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#programas" class="hover:text-white transition-colors">CITE NextGen</a></li>
+                        <li><a href="#programas" class="hover:text-white transition-colors">IA & Competencias</a></li>
+                        <li><a href="#programas" class="hover:text-white transition-colors">Sello Empresa</a></li>
+                        <li><a href="#programas" class="hover:text-white transition-colors">Mujeres en STEM</a></li>
+                        <li><a href="#programas" class="hover:text-white transition-colors">Mentores Globales</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Boletín / Observatorio -->
+                <div class="space-y-3">
+                    <h5 class="text-sm font-bold text-white tracking-wide">Observatorio de Empleo</h5>
+                    <p class="text-xs text-slate-400">
+                        Suscríbete a nuestro reporte mensual sobre tendencias de empleabilidad, inclusión y futuro del trabajo.
+                    </p>
+                    <form id="newsletter-form" class="space-y-2" onsubmit="handleNewsletter(event)">
+                        <div class="relative">
+                            <input type="email" id="newsletter-email" required placeholder="tu@correo.org" class="w-full px-3.5 py-2 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-cite-blue">
+                        </div>
+                        <button type="submit" class="w-full py-2 px-3 rounded-xl bg-cite-blue hover:bg-blue-600 text-white font-bold text-xs transition-colors">
+                            Suscribirme al Boletín
+                        </button>
+                    </form>
+                    <span id="newsletter-success" class="hidden text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <i data-lucide="check" class="w-3.5 h-3.5"></i> ¡Gracias por suscribirte!
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Bottom Legal Bar -->
+            <div class="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
+                <div>
+                    &copy; 2026 Cámara Internacional de Talento y Empleabilidad (CITE). Organización Sin Fines de Lucro.
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="hover:text-white transition-colors">Aviso Legal</a>
+                    <span>&bull;</span>
+                    <a href="#" class="hover:text-white transition-colors">Política de Privacidad</a>
+                    <span>&bull;</span>
+                    <a href="#" class="hover:text-white transition-colors">Transparencia</a>
+                    <span>&bull;</span>
+                    <a href="#" class="hover:text-white transition-colors">Código de Ética</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE MODAL (REGISTRO / DONACIÓN / POSTULACIÓN) -->
+    <div id="action-modal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-200 transform transition-all max-h-[90vh] flex flex-col">
+            
+            <!-- Modal Header -->
+            <div class="bg-gradient-to-r from-cite-navy via-slate-900 to-cite-dark text-white p-6 relative">
+                <button onclick="closeModal()" class="absolute top-5 right-5 p-1 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors" aria-label="Cerrar ventana">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+                <span id="modal-category-badge" class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 mb-2">
+                    Convocatoria Oficial 2026
+                </span>
+                <h3 id="modal-title" class="text-xl font-extrabold font-display">Sumarse a la Red de CITE</h3>
+                <p id="modal-subtitle" class="text-xs text-slate-300 mt-1">Completa el formulario institucional según tu perfil de participación.</p>
+            </div>
+
+            <!-- Modal Content & Form -->
+            <div class="p-6 overflow-y-auto flex-1 space-y-5">
+                
+                <!-- Role Selector Tabs -->
+                <div class="space-y-1.5" id="role-selector-container">
+                    <label class="block text-xs font-bold text-slate-700">Selecciona tu perfil institucional:</label>
+                    <div class="grid grid-cols-3 gap-2">
+                        <button type="button" onclick="switchRole('talento')" id="role-btn-talento" class="role-btn active py-2 px-3 rounded-xl text-xs font-bold border border-blue-200 bg-blue-50 text-cite-blue text-center">
+                            Talento / Postulante
+                        </button>
+                        <button type="button" onclick="switchRole('empresa')" id="role-btn-empresa" class="role-btn py-2 px-3 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 text-center">
+                            Empresa Aliada
+                        </button>
+                        <button type="button" onclick="switchRole('mentor')" id="role-btn-mentor" class="role-btn py-2 px-3 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 text-center">
+                            Mentor Voluntario
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <form id="modal-form" onsubmit="handleModalSubmit(event)" class="space-y-4 text-left">
+                    <input type="hidden" id="form-role" name="role" value="talento">
+                    <input type="hidden" id="form-program-preset" name="preset_program" value="">
+
+                    <!-- Name Field -->
+                    <div>
+                        <label for="form-name" class="block text-xs font-bold text-slate-700 mb-1" id="label-name">Nombre completo *</label>
+                        <input type="text" id="form-name" required placeholder="Ej: Sofía Valenzuela" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-cite-blue">
+                    </div>
+
+                    <!-- Email Field -->
+                    <div>
+                        <label for="form-email" class="block text-xs font-bold text-slate-700 mb-1">Correo electrónico institucional o personal *</label>
+                        <input type="email" id="form-email" required placeholder="tu@correo.com" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-cite-blue">
+                    </div>
+
+                    <!-- Dynamic Field: Career or Company or Expertise -->
+                    <div id="dynamic-field-container">
+                        <label for="form-extra" class="block text-xs font-bold text-slate-700 mb-1" id="label-extra">Área de estudio, oficio o profesión *</label>
+                        <input type="text" id="form-extra" required placeholder="Ej: Ingeniería, Administración, Programación, etc." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-cite-blue">
+                    </div>
+
+                    <!-- Country Field -->
+                    <div>
+                        <label for="form-country" class="block text-xs font-bold text-slate-700 mb-1">País de residencia *</label>
+                        <select id="form-country" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-cite-blue bg-white">
+                            <option value="">Selecciona tu país...</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Chile">Chile</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="España">España</option>
+                            <option value="Estados Unidos">Estados Unidos</option>
+                            <option value="México">México</option>
+                            <option value="Panamá">Panamá</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Perú">Perú</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Otro">Otro país de Latinoamérica y el Caribe / Global</option>
+                        </select>
+                    </div>
+
+                    <!-- Notes / Message -->
+                    <div>
+                        <label for="form-notes" class="block text-xs font-bold text-slate-700 mb-1">Motivación o comentarios adicionales</label>
+                        <textarea id="form-notes" rows="3" placeholder="Cuéntanos brevemente qué esperas de CITE o cómo te gustaría colaborar..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-cite-blue"></textarea>
+                    </div>
+
+                    <!-- Check Terms -->
+                    <div class="flex items-start gap-2 pt-1">
+                        <input type="checkbox" id="form-terms" required class="mt-1 w-4 h-4 text-cite-blue rounded border-slate-300 focus:ring-cite-blue">
+                        <label for="form-terms" class="text-xs text-slate-500 leading-tight">
+                            Declaro que la información proporcionada es veraz y acepto los estatutos y políticas de privacidad de la asociación CITE.
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-2">
+                        <button type="submit" id="form-submit-btn" class="w-full py-3 px-4 rounded-xl bg-cite-blue hover:bg-blue-700 text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            <span id="form-submit-text">Enviar Postulación / Registro</span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Success Confirmation Box -->
+                <div id="modal-success" class="hidden text-center py-8 space-y-4">
+                    <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                        <i data-lucide="check-circle" class="w-10 h-10"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-cite-navy font-display">¡Solicitud Recibida con Éxito!</h4>
+                    <p class="text-sm text-slate-600 max-w-sm mx-auto leading-relaxed">
+                        Gracias por tu interés en la Cámara Internacional de Talento y Empleabilidad (CITE). Nos pondremos en contacto contigo vía correo electrónico en las próximas 48 horas.
+                    </p>
+                    <div class="pt-3">
+                        <button onclick="closeModal()" class="px-6 py-2.5 rounded-xl bg-cite-navy text-white text-xs font-bold hover:bg-slate-800 transition-colors">
+                            Cerrar Ventana
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
