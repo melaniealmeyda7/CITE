@@ -73,4 +73,4 @@ Al ser un sitio web estático optimizado, puede alojarse de forma inmediata en:
 
 ## 📜 Licencia y Derechos
 
-© 2026 Cámara Internacional de Talento y Empleabilidad (CITE). Asociación Internacional Sin Fines de Lucro.
+© 2026 Cámara Internacional de Talento y Empleabilidad (CITE). Asociación Peruana Sin Fines de Lucro.
