@@ -182,17 +182,28 @@ function initFaqAccordion() {
    ========================================================================== */
 function initModalEvents() {
     const modal = document.getElementById('action-modal');
-    if (!modal) return;
+    const loginModal = document.getElementById('login-modal');
 
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
+
+    if (loginModal) {
+        loginModal.addEventListener('click', (e) => {
+            if (e.target === loginModal) {
+                closeLoginModal();
+            }
+        });
+    }
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             closeModal();
+            closeLoginModal();
         }
     });
 }
@@ -359,3 +370,104 @@ window.handleNewsletter = function(event) {
 window.downloadReportModal = function() {
     openModal('registro', 'talento');
 };
+
+/* ==========================================================================
+   9. Funciones de Acceso y Login al Directorio CITE
+   ========================================================================== */
+window.openLoginModal = function() {
+    const modal = document.getElementById('login-modal');
+    if (!modal) {
+        window.location.href = 'directorio.html';
+        return;
+    }
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+};
+
+window.closeLoginModal = function() {
+    const modal = document.getElementById('login-modal');
+    if (!modal) return;
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+};
+
+window.selectLoginRole = function(role) {
+    const roleInput = document.getElementById('login-role-input');
+    const emailInput = document.getElementById('login-email');
+    const btnEmpresa = document.getElementById('login-role-empresa');
+    const btnTalento = document.getElementById('login-role-talento');
+    const btnAuditor = document.getElementById('login-role-auditor');
+
+    if (roleInput) roleInput.value = role;
+
+    [btnEmpresa, btnTalento, btnAuditor].forEach(b => {
+        if (b) {
+            b.classList.remove('bg-cyan-500', 'text-slate-950', 'font-bold');
+            b.classList.add('hover:text-white', 'text-slate-400');
+        }
+    });
+
+    if (role === 'talento') {
+        if (btnTalento) {
+            btnTalento.classList.add('bg-cyan-500', 'text-slate-950', 'font-bold');
+            btnTalento.classList.remove('hover:text-white', 'text-slate-400');
+        }
+        if (emailInput) emailInput.placeholder = 'talento.verificado@cite.org';
+    } else if (role === 'auditor') {
+        if (btnAuditor) {
+            btnAuditor.classList.add('bg-cyan-500', 'text-slate-950', 'font-bold');
+            btnAuditor.classList.remove('hover:text-white', 'text-slate-400');
+        }
+        if (emailInput) emailInput.placeholder = 'auditor.etico@cite-latam.org';
+    } else {
+        // Empresa
+        if (btnEmpresa) {
+            btnEmpresa.classList.add('bg-cyan-500', 'text-slate-950', 'font-bold');
+            btnEmpresa.classList.remove('hover:text-white', 'text-slate-400');
+        }
+        if (emailInput) emailInput.placeholder = 'reclutador@empresa.com';
+    }
+};
+
+window.handleLoginSubmit = function(event) {
+    event.preventDefault();
+    const email = document.getElementById('login-email').value || 'reclutador@empresa.com';
+    const role = document.getElementById('login-role-input').value || 'empresa';
+    const submitBtn = document.getElementById('login-submit-btn');
+
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+            <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+            </svg>
+            Validando credenciales...
+        `;
+    }
+
+    const userData = {
+        name: email.split('@')[0].replace('.', ' ').toUpperCase(),
+        email: email,
+        role: role,
+        company: role === 'empresa' ? 'Empresa Aliada CITE' : (role === 'auditor' ? 'Comité Auditor CITE' : 'Talento Certificado')
+    };
+
+    localStorage.setItem('cite_auth_user', JSON.stringify(userData));
+
+    setTimeout(() => {
+        window.location.href = 'directorio.html';
+    }, 800);
+};
+
+window.demoLogin = function(role = 'empresa') {
+    const userData = {
+        name: 'Empresa Aliada (Sesión Invitado)',
+        email: 'reclutador.demo@cite-latam.org',
+        role: role,
+        company: 'Red Corporativa CITE'
+    };
+    localStorage.setItem('cite_auth_user', JSON.stringify(userData));
+    window.location.href = 'directorio.html';
+};
+

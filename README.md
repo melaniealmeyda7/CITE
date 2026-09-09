@@ -6,12 +6,13 @@
 
 ---
 
-### 🌐 Link de Visualización Oficial en Vivo:
-👉 **[https://melaniealmeyda7.github.io/CITE/](https://melaniealmeyda7.github.io/CITE/)**
+### 🌐 Enlaces Oficiales en Vivo:
+- 🏛️ **Portal Institucional**: [https://melaniealmeyda7.github.io/CITE/](https://melaniealmeyda7.github.io/CITE/)
+- 🛡️ **Directorio Interactivo de Talento Verificado**: [https://melaniealmeyda7.github.io/CITE/directorio.html](https://melaniealmeyda7.github.io/CITE/directorio.html)
 
 ---
 
-Sitio web corporativo y de captación de impacto social desarrollado para la **Cámara Internacional de Talento y Empleabilidad (CITE)**, una asociación internacional sin fines de lucro (ONG) dedicada a cerrar la brecha laboral y potenciar el talento global en más de 28 países de **Latinoamérica y el Caribe**.
+Sitio web institucional, portal de acceso (Login) y **Directorio Interactivo de Talentos Verificados** desarrollados para la **Cámara Internacional de Talento y Empleabilidad (CITE)**, una asociación sin fines de lucro (ONG) dedicada a certificar y conectar talento de alto rendimiento en **Latinoamérica y el Caribe**.
 
 ---
 
@@ -41,11 +42,13 @@ Sitio web corporativo y de captación de impacto social desarrollado para la **C
 
 ```
 cite-landing-page/
-├── index.html         # Estructura semántica completa (HTML5 + Tailwind CSS)
+├── index.html         # Landing page principal y modal de login (HTML5 + Tailwind CSS)
+├── directorio.html    # Dashboard interactivo del Directorio de Talentos Verificados
 ├── css/
 │   └── styles.css     # Estilos personalizados, efectos de cristal, animaciones y scrollbar
 ├── js/
-│   └── app.js         # Interactividad: contadores, filtros, acordeones, modales y validación
+│   ├── app.js         # Interactividad principal, contadores, filtros y modales de la portada
+│   └── directorio.js  # Lógica del directorio, dataset de talentos, filtros reactivos y expedientes
 └── README.md          # Documentación del proyecto
 ```
 

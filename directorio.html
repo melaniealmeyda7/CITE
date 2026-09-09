@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio de Talento Verificado | CITE - Latinoamérica y el Caribe</title>
+    <meta name="description" content="Portal oficial y directorio interactivo de talentos verificados de la Cámara Internacional de Talento y Empleabilidad (CITE). Perfiles técnicos y éticos auditados para empresas y organizaciones globales.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%220%22%20%22100%22%20%22100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cite: {
+                            navy: '#0B192C',
+                            blue: '#1E3E62',
+                            dark: '#060B19',
+                            teal: '#008080',
+                            accent: '#00A896',
+                            light: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#060B19] text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-cyan-500 selection:text-white">
+
+    <!-- TOP GLOBAL HEADER -->
+    <header class="sticky top-0 z-40 bg-[#060B19]/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo & Brand -->
+                <div class="flex items-center gap-4">
+                    <a href="index.html" class="flex items-center gap-3 group">
+                        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-lg shadow-cyan-500/25 group-hover:scale-105 transition-transform">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span class="font-display font-extrabold text-2xl tracking-wider text-white">CITE</span>
+                                <span class="text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-400/30">
+                                    DIRECTORIO OFICIAL
+                                </span>
+                            </div>
+                            <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-400 hidden sm:block">
+                                Red de Talento Verificado &bull; Latinoamérica y el Caribe
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Right Actions & User Pill -->
+                <div class="flex items-center gap-4">
+                    <a href="index.html" class="hidden md:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-xs font-semibold border border-white/10 transition-colors">
+                        <i data-lucide="arrow-left" class="w-3.5 h-3.5 text-cyan-400"></i>
+                        <span>Volver al Portal CITE</span>
+                    </a>
+                    
+                    <button onclick="exportSelection()" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 text-xs font-bold border border-cyan-500/30 transition-colors">
+                        <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                        <span>Exportar Selección</span>
+                    </button>
+
+                    <!-- User Status Session Container -->
+                    <div id="header-user-status" class="pl-3 border-l border-white/10">
+                        <!-- Populated dynamically via JS -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN DASHBOARD CONTENT -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+        
+        <!-- DASHBOARD HERO & METRICS BANNER -->
+        <section class="relative rounded-3xl bg-gradient-to-r from-blue-950/70 via-[#0B1528] to-cyan-950/70 border border-white/15 p-6 sm:p-8 overflow-hidden shadow-2xl backdrop-blur-xl">
+            <!-- Background Glow Elements -->
+            <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-cyan-500/10 blur-[100px] pointer-events-none"></div>
+            <div class="absolute -left-20 -top-20 w-80 h-80 rounded-full bg-blue-600/15 blur-[100px] pointer-events-none"></div>
+            
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                
+                <!-- Left Title & Subtitle -->
+                <div class="lg:col-span-7 space-y-3">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-bold">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                        Base de Talento Auditado en Tiempo Real
+                    </div>
+                    <h1 class="text-2xl sm:text-4xl font-extrabold font-display text-white tracking-tight">
+                        Directorio de <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">Talento Verificado</span>
+                    </h1>
+                    <p class="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
+                        Conecta directamente con profesionales capacitados bajo estándares de élite en Latinoamérica y el Caribe. Cada expediente cuenta con evaluación técnica certificada y auditoría de integridad laboral sin costo de intermediación.
+                    </p>
+                </div>
+
+                <!-- Right Live Metrics Counters -->
+                <div class="lg:col-span-5 grid grid-cols-2 gap-3.5">
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center backdrop-blur-sm">
+                        <div id="metric-total-talents" class="text-2xl sm:text-3xl font-extrabold font-display text-white font-mono">+1,248</div>
+                        <div class="text-[11px] text-cyan-300 font-bold uppercase tracking-wider mt-1">Talentos Acreditados</div>
+                        <div class="text-[10px] text-slate-400">100% Sin sesgo socioeconómico</div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center backdrop-blur-sm">
+                        <div id="metric-avg-score" class="text-2xl sm:text-3xl font-extrabold font-display text-emerald-400 font-mono">96.8%</div>
+                        <div class="text-[11px] text-slate-200 font-bold uppercase tracking-wider mt-1">Idoneidad Promedio</div>
+                        <div class="text-[10px] text-slate-400">Pruebas técnicas auditadas</div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center backdrop-blur-sm">
+                        <div id="metric-placement-rate" class="text-2xl sm:text-3xl font-extrabold font-display text-white font-mono">92.4%</div>
+                        <div class="text-[11px] text-purple-300 font-bold uppercase tracking-wider mt-1">Tasa de Empleabilidad</div>
+                        <div class="text-[10px] text-slate-400">Colocación formal efectiva</div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center backdrop-blur-sm">
+                        <div id="metric-countries" class="text-2xl sm:text-3xl font-extrabold font-display text-amber-400 font-mono">22 Países</div>
+                        <div class="text-[11px] text-slate-200 font-bold uppercase tracking-wider mt-1">Cobertura Regional</div>
+                        <div class="text-[10px] text-slate-400">Latinoamérica y el Caribe</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEARCH AND FILTER CONTROLS -->
+        <section class="rounded-2xl bg-white/5 border border-white/10 p-5 sm:p-6 space-y-5 backdrop-blur-md">
+            
+            <!-- Search Bar & Reset -->
+            <div class="flex flex-col sm:flex-row gap-3 items-center justify-between">
+                <div class="relative w-full sm:flex-1">
+                    <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+                    <input 
+                        type="text" 
+                        id="search-input"
+                        placeholder="Buscar por nombre, especialidad (ej. DevOps, Python, AI, Scrum), país o ID..."
+                        class="w-full pl-12 pr-4 py-3 rounded-xl bg-white/10 border border-white/15 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all"
+                    >
+                </div>
+                <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+                    <button onclick="resetFilters()" class="w-full sm:w-auto px-4 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-slate-300 hover:text-white text-xs font-bold border border-white/15 transition-colors flex items-center justify-center gap-1.5">
+                        <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+                        <span>Restablecer Filtros</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Categories Tabs -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+                <button data-category="todos" class="category-btn active px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all bg-cyan-500 text-white shadow-md">
+                    Todos los Perfiles
+                </button>
+                <button data-category="software" class="category-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all bg-white/5 text-slate-300 hover:bg-white/10">
+                    💻 Software & Cloud
+                </button>
+                <button data-category="data" class="category-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all bg-white/5 text-slate-300 hover:bg-white/10">
+                    📊 Datos & Inteligencia Artificial
+                </button>
+                <button data-category="cyber" class="category-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all bg-white/5 text-slate-300 hover:bg-white/10">
+                    🔒 Ciberseguridad & DevSecOps
+                </button>
+                <button data-category="negocios" class="category-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all bg-white/5 text-slate-300 hover:bg-white/10">
+                    📈 Negocios & Operaciones
+                </button>
+                <button data-category="sostenibilidad" class="category-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all bg-white/5 text-slate-300 hover:bg-white/10">
+                    🌱 Sostenibilidad & ESG
+                </button>
+            </div>
+
+            <!-- Advanced Dropdowns Filters -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 border-t border-white/10 text-xs">
+                
+                <!-- Country Filter -->
+                <div>
+                    <label for="filter-country" class="block font-bold text-slate-400 mb-1.5 flex items-center gap-1.5">
+                        <i data-lucide="globe" class="w-3.5 h-3.5 text-cyan-400"></i> País (Latinoamérica & Caribe)
+                    </label>
+                    <select id="filter-country" class="w-full px-3 py-2.5 rounded-xl bg-[#090e1a] border border-white/15 text-slate-200 focus:outline-none focus:border-cyan-400">
+                        <option value="todos">Todos los países</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Costa Rica">Costa Rica</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Guatemala">Guatemala</option>
+                        <option value="México">México</option>
+                        <option value="Panamá">Panamá</option>
+                        <option value="Perú">Perú</option>
+                        <option value="República Dominicana">República Dominicana</option>
+                        <option value="Uruguay">Uruguay</option>
+                    </select>
+                </div>
+
+                <!-- Badge Level Filter -->
+                <div>
+                    <label for="filter-badge" class="block font-bold text-slate-400 mb-1.5 flex items-center gap-1.5">
+                        <i data-lucide="award" class="w-3.5 h-3.5 text-amber-400"></i> Nivel de Verificación CITE
+                    </label>
+                    <select id="filter-badge" class="w-full px-3 py-2.5 rounded-xl bg-[#090e1a] border border-white/15 text-slate-200 focus:outline-none focus:border-cyan-400">
+                        <option value="todos">Todos los niveles</option>
+                        <option value="Platino">Platino (Senior + 100% Ética)</option>
+                        <option value="Oro">Oro (Acreditado Avanzado)</option>
+                        <option value="Promesa CITE">Promesa CITE (NextGen)</option>
+                    </select>
+                </div>
+
+                <!-- Availability Filter -->
+                <div>
+                    <label for="filter-avail" class="block font-bold text-slate-400 mb-1.5 flex items-center gap-1.5">
+                        <i data-lucide="clock" class="w-3.5 h-3.5 text-emerald-400"></i> Disponibilidad de Contratación
+                    </label>
+                    <select id="filter-avail" class="w-full px-3 py-2.5 rounded-xl bg-[#090e1a] border border-white/15 text-slate-200 focus:outline-none focus:border-cyan-400">
+                        <option value="todos">Todas las disponibilidades</option>
+                        <option value="Inmediata">Disponibilidad Inmediata</option>
+                        <option value="2 Semanas">En 2 Semanas</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- RESULTS HEADER BAR -->
+        <div class="flex items-center justify-between text-xs text-slate-400 px-1">
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                <span id="results-count" class="font-semibold text-slate-200">Cargando talentos verificados...</span>
+            </div>
+            <div class="flex items-center gap-1 text-[11px] text-slate-400">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-cyan-400"></i>
+                <span class="hidden sm:inline">Perfiles 100% auditados por la comisión técnica de CITE</span>
+            </div>
+        </div>
+
+        <!-- TALENTS GRID (RENDERED VIA JAVASCRIPT) -->
+        <div id="talents-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Dynamically populated by js/directorio.js -->
+        </div>
+
+        <!-- EMPTY STATE (IF NO MATCHES) -->
+        <div id="empty-state" class="hidden py-16 text-center space-y-4 rounded-2xl bg-white/5 border border-white/10 p-8 max-w-lg mx-auto">
+            <div class="w-16 h-16 rounded-full bg-cyan-500/10 text-cyan-400 flex items-center justify-center mx-auto">
+                <i data-lucide="user-x" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white">No se encontraron talentos con los filtros actuales</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+                Prueba ajustando los criterios de búsqueda o restableciendo los filtros para ver todo el catálogo regional de Latinoamérica y el Caribe.
+            </p>
+            <button onclick="resetFilters()" class="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-white font-bold text-xs shadow-md transition-all">
+                Restablecer Filtros
+            </button>
+        </div>
+
+    </main>
+
+    <!-- FOOTER INSTITUCIONAL -->
+    <footer class="mt-16 bg-[#04070F] border-t border-white/10 py-8 text-center text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+                </div>
+                <span class="font-bold text-slate-200">CITE</span> &bull; Cámara Internacional de Talento y Empleabilidad
+            </div>
+            <p class="text-[11px] text-slate-400">
+                Asociación sin fines de lucro &bull; Promoviendo el empleo digno en Latinoamérica y el Caribe.
+            </p>
+            <a href="index.html" class="text-cyan-400 hover:text-cyan-300 font-semibold underline underline-offset-4">
+                Volver a la Portada Principal
+            </a>
+        </div>
+    </footer>
+
+    <!-- MODAL 1: EXPEDIENTE COMPLETO & CREDENCIAL CRIPTOGRÁFICA -->
+    <div id="dossier-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="relative w-full max-w-2xl bg-[#0c1322] border border-white/20 rounded-3xl shadow-2xl overflow-hidden my-8 animate-in fade-in zoom-in-95 duration-200">
+            <button onclick="closeModals()" class="absolute top-5 right-5 z-20 w-8 h-8 rounded-full bg-black/40 text-slate-300 hover:text-white hover:bg-black/60 flex items-center justify-center transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div id="dossier-content">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: FORMULARIO DE CONTACTO / AGENDAR ENTREVISTA -->
+    <div id="contact-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="relative w-full max-w-md bg-[#0c1322] border border-white/20 rounded-3xl shadow-2xl p-6 sm:p-8 space-y-6 my-8 animate-in fade-in zoom-in-95 duration-200">
+            
+            <div class="flex items-start justify-between border-b border-white/10 pb-4">
+                <div>
+                    <span class="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                        Vínculo Directo CITE
+                    </span>
+                    <h3 class="text-lg font-bold text-white font-display mt-2">Solicitar Entrevista Institucional</h3>
+                    <p id="contact-talent-name" class="text-xs font-semibold text-cyan-400 mt-0.5">Nombre del Talento</p>
+                    <p id="contact-talent-role" class="text-[11px] text-slate-400">Rol y Ubicación</p>
+                </div>
+                <button onclick="closeModals()" class="w-8 h-8 rounded-full bg-white/5 text-slate-400 hover:text-white flex items-center justify-center">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+            <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                <input type="hidden" id="contact-talent-id">
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 mb-1">Nombre del Reclutador / Empresa *</label>
+                    <input type="text" required placeholder="Ej: Valentina Paz / Banco Latinoamericano" class="w-full px-3.5 py-2.5 rounded-xl bg-white/5 border border-white/15 text-white text-xs focus:outline-none focus:border-cyan-400">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 mb-1">Correo Corporativo *</label>
+                    <input type="email" required placeholder="tu-correo@empresa.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white/5 border border-white/15 text-white text-xs focus:outline-none focus:border-cyan-400">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 mb-1">Propuesta de Vacante o Proyecto *</label>
+                    <input type="text" required placeholder="Ej: Posición Senior Cloud - Remoto / Tiempo Completo" class="w-full px-3.5 py-2.5 rounded-xl bg-white/5 border border-white/15 text-white text-xs focus:outline-none focus:border-cyan-400">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 mb-1">Mensaje o Rango Salarial Ofrecido</label>
+                    <textarea rows="3" placeholder="Detalles de la oportunidad, beneficios y fechas propuestas para la primera llamada..." class="w-full px-3.5 py-2.5 rounded-xl bg-white/5 border border-white/15 text-white text-xs focus:outline-none focus:border-cyan-400"></textarea>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" id="contact-submit-btn" class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xs shadow-lg transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                        <span>Enviar Solicitud Institucional</span>
+                    </button>
+                    <p class="text-[10px] text-center text-slate-400 mt-2">
+                        CITE actúa como facilitador ético y garante de idoneidad sin comisiones de contratación.
+                    </p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/directorio.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
