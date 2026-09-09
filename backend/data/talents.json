@@ -1,0 +1,201 @@
+[
+  {
+    "id": "CITE-VER-9412",
+    "name": "Mateo Silva Arboleda",
+    "role": "Senior Cloud & DevOps Engineer",
+    "category": "software",
+    "country": "Colombia",
+    "city": "Medellín",
+    "flag": "🇨🇴",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+    "badgeLevel": "Platino",
+    "score": 98,
+    "ethicalScore": "100% Auditado",
+    "availability": "Inmediata",
+    "remote": true,
+    "experience": "6+ años de experiencia",
+    "english": "C1 Profesional Avanzado",
+    "skills": [
+      "AWS Cloud",
+      "Kubernetes",
+      "Terraform",
+      "CI/CD",
+      "Docker",
+      "Python"
+    ],
+    "bio": "Ingeniero especializado en arquitectura escalable y migración a la nube para fintech y banca. Graduado con honores de la aceleración técnica CITE.",
+    "certifications": [
+      "Acreditación Técnica CITE Cloud Architecture 2025",
+      "Auditoría Ética y Liderazgo Colaborativo CITE",
+      "AWS Certified Solutions Architect"
+    ],
+    "auditHash": "0x892a...f941c (Bloque Verificado #48291)",
+    "status": "aprobado",
+    "created_at": "2026-09-09T21:57:26.351Z"
+  },
+  {
+    "id": "CITE-VER-9428",
+    "name": "Sofía Morales Guzmán",
+    "role": "Lead Data Scientist & Generative AI",
+    "category": "data",
+    "country": "México",
+    "city": "Guadalajara",
+    "flag": "🇲🇽",
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+    "badgeLevel": "Platino",
+    "score": 99,
+    "ethicalScore": "100% Auditado",
+    "availability": "2 Semanas",
+    "remote": true,
+    "experience": "5+ años de experiencia",
+    "english": "C1 Profesional Avanzado",
+    "skills": [
+      "Python",
+      "PyTorch",
+      "LLMs & RAG",
+      "SQL Avanzado",
+      "Power BI",
+      "Data Governance"
+    ],
+    "bio": "Especialista en modelos predictivos y soluciones de inteligencia artificial aplicada a operaciones de impacto comercial y social.",
+    "certifications": [
+      "Certificación CITE Especialista en IA y Datos",
+      "Validación de Idoneidad Ética y Manejo de Datos Sensibles",
+      "TensorFlow Developer Certified"
+    ],
+    "auditHash": "0x3e1b...d928a (Bloque Verificado #48305)",
+    "status": "aprobado",
+    "created_at": "2026-09-09T21:57:26.357Z"
+  },
+  {
+    "id": "CITE-VER-9435",
+    "name": "Camila Ramos Velarde",
+    "role": "Full Stack Software Engineer",
+    "category": "software",
+    "country": "Perú",
+    "city": "Lima",
+    "flag": "🇵🇪",
+    "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80",
+    "badgeLevel": "Oro",
+    "score": 96,
+    "ethicalScore": "100% Auditado",
+    "availability": "Inmediata",
+    "remote": true,
+    "experience": "4+ años de experiencia",
+    "english": "B2 Profesional Intermedio",
+    "skills": [
+      "React.js",
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Next.js",
+      "Tailwind CSS"
+    ],
+    "bio": "Desarrolladora orientada a productos digitales centrados en el usuario, interfaces de alto rendimiento y APIs resilientes.",
+    "certifications": [
+      "Insignia CITE Desarrollo Web Full Stack de Alto Nivel",
+      "Certificado de Integridad Laboral CITE 2025"
+    ],
+    "auditHash": "0x77c2...b943f (Bloque Verificado #48312)",
+    "status": "aprobado",
+    "created_at": "2026-09-09T21:57:26.357Z"
+  },
+  {
+    "id": "CITE-VER-9441",
+    "name": "Lucas Fernández Rossi",
+    "role": "DevSecOps & Ciberseguridad",
+    "category": "cyber",
+    "country": "Argentina",
+    "city": "Córdoba",
+    "flag": "🇦🇷",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    "badgeLevel": "Platino",
+    "score": 97,
+    "ethicalScore": "100% Auditado",
+    "availability": "Inmediata",
+    "remote": true,
+    "experience": "5+ años de experiencia",
+    "english": "B2 Avanzado",
+    "skills": [
+      "Seguridad Ofensiva",
+      "OWASP Top 10",
+      "Linux Hardening",
+      "Go",
+      "Docker",
+      "SOC Analysis"
+    ],
+    "bio": "Especialista en aseguramiento de infraestructura crítica y mitigación de vulnerabilidades en arquitecturas distribuidas.",
+    "certifications": [
+      "CITE Cyber Defense & Threat Intelligence Specialist",
+      "Aprobación de Antecedentes y Ética Criptográfica CITE"
+    ],
+    "auditHash": "0x11fa...e944d (Bloque Verificado #48324)",
+    "status": "aprobado",
+    "created_at": "2026-09-09T21:57:26.357Z"
+  },
+  {
+    "id": "CITE-VER-9456",
+    "name": "Valentina Gómez Valdés",
+    "role": "Agile Project Manager & Digital Transformation",
+    "category": "negocios",
+    "country": "Chile",
+    "city": "Santiago",
+    "flag": "🇨🇱",
+    "avatar": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80",
+    "badgeLevel": "Platino",
+    "score": 98,
+    "ethicalScore": "100% Auditado",
+    "availability": "2 Semanas",
+    "remote": true,
+    "experience": "7+ años de experiencia",
+    "english": "C2 Bilingüe",
+    "skills": [
+      "Scrum Master (PSM II)",
+      "Jira / Confluence",
+      "Lean Six Sigma",
+      "OKRs",
+      "Liderazgo de Equipos"
+    ],
+    "bio": "Líder de gestión ágil para escuadras multidisciplinarias con enfoque en entrega de valor continuo, métricas de negocio y reducción del 'time-to-market'.",
+    "certifications": [
+      "CITE Executive Agile Leadership & Culture",
+      "Certificación de Gestión Ética Organizacional CITE"
+    ],
+    "auditHash": "0x98bb...c945a (Bloque Verificado #48339)",
+    "status": "aprobado",
+    "created_at": "2026-09-09T21:57:26.357Z"
+  },
+  {
+    "id": "CITE-VER-9462",
+    "name": "Diego Alvarado Cueva",
+    "role": "Machine Learning Engineer & MLOps",
+    "category": "data",
+    "country": "Ecuador",
+    "city": "Quito",
+    "flag": "🇪🇨",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+    "badgeLevel": "Oro",
+    "score": 95,
+    "ethicalScore": "100% Auditado",
+    "availability": "Inmediata",
+    "remote": true,
+    "experience": "3+ años de experiencia",
+    "english": "B2 Profesional",
+    "skills": [
+      "Python",
+      "FastAPI",
+      "MLflow",
+      "Scikit-Learn",
+      "Computer Vision",
+      "Docker"
+    ],
+    "bio": "Despliegue y mantenimiento de pipelines de aprendizaje automático en producción para visión por computadora y análisis de documentos.",
+    "certifications": [
+      "CITE Machine Learning Applied Systems 2025",
+      "Certificación de Buenas Prácticas Éticas en Algoritmos CITE"
+    ],
+    "auditHash": "0x44ec...a946b (Bloque Verificado #48348)",
+    "status": "aprobado",
+    "created_at": "2026-09-09T21:57:26.357Z"
+  }
+]

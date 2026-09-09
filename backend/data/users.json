@@ -1,0 +1,29 @@
+[
+  {
+    "id": "usr-admin-01",
+    "email": "admin@cite.org",
+    "password_hash": "$2a$10$2wgdg/yeXEebgyFSQjRqMO2qZ3CuqrHgSjjZJ0DCYdvmWMsfgYYxa",
+    "name": "Directora General de Auditoría CITE",
+    "role": "auditor",
+    "company": "Comité Evaluador CITE Internacional",
+    "created_at": "2026-09-09T21:57:26.441Z"
+  },
+  {
+    "id": "usr-empresa-01",
+    "email": "reclutador@empresa.com",
+    "password_hash": "$2a$10$IvGBlewnkOpG/WAQd1dRo.q2CK6sb2W29I3nAJLkgmyTGQi1J4CIK",
+    "name": "Tech Talent Partner",
+    "role": "empresa",
+    "company": "Alianza Corporativa CITE",
+    "created_at": "2026-09-09T21:57:26.532Z"
+  },
+  {
+    "id": "usr-talento-01",
+    "email": "talento@cite.org",
+    "password_hash": "$2a$10$wPLh6LLQ/qaFgqypdYVCUO3ZCCYCVQsoUoeAdt.T8TM1UBIKI1Qjq",
+    "name": "Mateo Silva Arboleda",
+    "role": "talento",
+    "company": "Red de Talento Verificado",
+    "created_at": "2026-09-09T21:57:26.606Z"
+  }
+]

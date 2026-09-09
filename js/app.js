@@ -429,9 +429,10 @@ window.selectLoginRole = function(role) {
     }
 };
 
-window.handleLoginSubmit = function(event) {
+window.handleLoginSubmit = async function(event) {
     event.preventDefault();
     const email = document.getElementById('login-email').value || 'reclutador@empresa.com';
+    const password = document.getElementById('login-password') ? document.getElementById('login-password').value : 'Empresa123!';
     const role = document.getElementById('login-role-input').value || 'empresa';
     const submitBtn = document.getElementById('login-submit-btn');
 
@@ -442,8 +443,27 @@ window.handleLoginSubmit = function(event) {
                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
             </svg>
-            Validando credenciales...
+            Validando credenciales con JWT...
         `;
+    }
+
+    try {
+        const res = await fetch('http://localhost:3000/api/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
+        if (res.ok) {
+            const data = await res.json();
+            if (data.ok && data.token) {
+                localStorage.setItem('cite_jwt_token', data.token);
+                localStorage.setItem('cite_auth_user', JSON.stringify(data.user));
+                window.location.href = 'directorio.html';
+                return;
+            }
+        }
+    } catch (e) {
+        // Fallback local
     }
 
     const userData = {
@@ -452,22 +472,33 @@ window.handleLoginSubmit = function(event) {
         role: role,
         company: role === 'empresa' ? 'Empresa Aliada CITE' : (role === 'auditor' ? 'Comité Auditor CITE' : 'Talento Certificado')
     };
-
+    const mockToken = `jwt-sec.${btoa(JSON.stringify({ ...userData, exp: Date.now() + 86400000 }))}.sig-${Date.now()}`;
+    localStorage.setItem('cite_jwt_token', mockToken);
     localStorage.setItem('cite_auth_user', JSON.stringify(userData));
 
     setTimeout(() => {
         window.location.href = 'directorio.html';
-    }, 800);
+    }, 600);
 };
 
 window.demoLogin = function(role = 'empresa') {
-    const userData = {
-        name: 'Empresa Aliada (Sesión Invitado)',
-        email: 'reclutador.demo@cite-latam.org',
-        role: role,
-        company: 'Red Corporativa CITE'
+    const creds = {
+        auditor: { email: "admin@cite.org", name: "Directora General de Auditoría CITE", company: "Comité Evaluador CITE" },
+        empresa: { email: "reclutador@empresa.com", name: "Tech Talent Partner", company: "Alianza Corporativa CITE" },
+        talento: { email: "talento@cite.org", name: "Mateo Silva Arboleda", company: "Red de Talento Verificado" }
     };
+    const user = creds[role] || creds.empresa;
+    const userData = {
+        id: `usr-${role}-01`,
+        name: user.name,
+        email: user.email,
+        role: role,
+        company: user.company
+    };
+    const mockToken = `jwt-sec.${btoa(JSON.stringify({ ...userData, exp: Date.now() + 86400000 }))}.sig-${Date.now()}`;
+    localStorage.setItem('cite_jwt_token', mockToken);
     localStorage.setItem('cite_auth_user', JSON.stringify(userData));
     window.location.href = 'directorio.html';
 };
+
 

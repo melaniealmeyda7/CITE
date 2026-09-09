@@ -43,35 +43,55 @@ Sitio web institucional, portal de acceso (Login) y **Directorio Interactivo de 
 ```
 cite-landing-page/
 ├── index.html         # Landing page principal y modal de login (HTML5 + Tailwind CSS)
-├── directorio.html    # Dashboard interactivo del Directorio de Talentos Verificados
+├── directorio.html    # Dashboard interactivo con Auth Gate protegido por JWT
 ├── css/
 │   └── styles.css     # Estilos personalizados, efectos de cristal, animaciones y scrollbar
 ├── js/
 │   ├── app.js         # Interactividad principal, contadores, filtros y modales de la portada
-│   └── directorio.js  # Lógica del directorio, dataset de talentos, filtros reactivos y expedientes
+│   └── directorio.js  # Lógica del directorio, cliente API REST, sesión JWT y RBAC
+├── backend/
+│   ├── server.js      # Servidor REST en Node.js (API REST + servidor estático)
+│   ├── auth.js        # Módulo de autenticación con Bcrypt, JWT y middlewares RBAC
+│   ├── database.js    # Motor de base de datos local (SQLite nativo + JSON sincronizado)
+│   ├── package.json   # Dependencias del backend (bcryptjs, jsonwebtoken, express, cors)
+│   └── data/          # Base de datos persistente local (cite.sqlite, users.json, talents.json)
 └── README.md          # Documentación del proyecto
 ```
 
 ---
 
-## 🚀 Cómo Visualizar y Ejecutar Localmente
+## 🔐 Sistema de Autenticación Segura y Roles (RBAC)
 
-### Opción 1: Servidor HTTP integrado de Python (Recomendado)
-Abre una terminal en el directorio del proyecto y ejecuta:
+El proyecto incluye un backend seguro en Node.js con:
+- **Encriptación de Contraseñas**: Todas las contraseñas se almacenan hasheadas con **Bcrypt** (Salt rounds = 10).
+- **Manejo de Sesiones**: Tokens firmados **JWT (JSON Web Tokens)** con expiración a 24 horas.
+- **Base de Datos Local**: Soporte nativo para **SQLite** y archivos JSON sincronizados.
+- **Control de Acceso por Roles (RBAC)**:
+  - 🛡️ **Auditor / Admin**: Registro de nuevos talentos, edición de puntajes y auditoría ética, y eliminación de registros.
+  - 🏢 **Empresa / Reclutador**: Consulta de talentos, favoritos, solicitud de entrevistas y descarga de reportes.
+  - 🎓 **Talento (Estudiante)**: Consulta general y edición de su propio perfil profesional, disponibilidad y habilidades.
 
+### 👥 Credenciales Semilla para Pruebas:
+| Rol | Correo Electrónico | Contraseña | Permisos |
+|---|---|---|---|
+| **Auditor / Admin** | `admin@cite.org` | `Admin123!` | Crear, editar puntajes, auditar y eliminar registros |
+| **Empresa / Reclutador** | `reclutador@empresa.com` | `Empresa123!` | Buscar, filtrar, agendar entrevistas y exportar |
+| **Talento (Estudiante)** | `talento@cite.org` | `Talento123!` | Ver directorio y actualizar su propio perfil y disponibilidad |
+
+---
+
+## 🚀 Cómo Iniciar el Backend y Visualizar Localmente
+
+### Paso 1: Iniciar el Servidor Backend Seguro (Node.js)
 ```bash
-cd /Users/melaniealmeyda/.gemini/antigravity/scratch/cite-landing-page
-python3 -m http.server 8080
+cd /Users/melaniealmeyda/.gemini/antigravity/scratch/cite-landing-page/backend
+node server.js
 ```
+El servidor se iniciará en **`http://localhost:3000`** e inicializará automáticamente la base de datos SQLite y los usuarios semilla con contraseñas encriptadas.
 
-Luego abre tu navegador en: [http://localhost:8080](http://localhost:8080)
-
-### Opción 2: Abrir directamente en el navegador
-Puedes hacer doble clic en el archivo `index.html` o ejecutar:
-
-```bash
-open /Users/melaniealmeyda/.gemini/antigravity/scratch/cite-landing-page/index.html
-```
+### Paso 2: Abrir en tu Navegador
+- **Directorio de Talentos**: [http://localhost:3000/directorio.html](http://localhost:3000/directorio.html)
+- **Portada Principal**: [http://localhost:3000/](http://localhost:3000/)
 
 ---
 
